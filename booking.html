@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework#2 booking</title>
+
+    <style>
+        body{
+            margin: 0;            
+            font-family: Roboto,sans-serif;
+            font-weight: bold;
+        }
+        .box-contain {
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-box {            
+            display: flex; 
+            flex-direction: column;            
+            border: solid 1px #d2d2d2;
+            border-radius: 5px;
+            padding-top:30px;
+        }
+        .txtCurrency{
+            color: red;
+        }
+        .boxs{
+            display: flex; 
+            flex-direction: row;
+        }
+        .box-row {
+            padding: 20px;
+        }
+        .boxs-footer{
+            background-color: whitesmoke;            
+            border: solid 1px #d2d2d2;
+        }
+        .box-group1 select, input {
+            border-radius: 3px;
+            border: solid 1px #bbbbbb;            
+            padding: 5px;
+        }
+        .box-group2{
+            display: flex;
+            flex-wrap: wrap;
+            margin-right:0;
+        }
+        .box-group2 input {
+            border-radius: 3px;
+            border: solid 1px #bbbbbb;
+            width: 58px;
+            padding: 5px;
+        } 
+        .box-group2 select {
+            border-radius: 3px;
+            border: solid 1px #bbbbbb;
+            width: 70px;
+            padding: 5px;
+        }
+        .group2 {
+            margin-right:20px;
+        }
+        .group2 > :last-child {
+            margin-right:0;
+            padding-right:0;
+        }
+        button {
+            padding: 8px 25px;
+            background-image: linear-gradient(#ff8d00, #ff2300);
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            box-shadow: none;
+            border: solid 1px red;
+        }  
+        label {
+            line-height: 1.5;
+        }   
+    </style>
+</head>
+<body>
+    <!-- Homework #2 ให้สร้าง form ชื่อ booking.html โดยมีหน้าตา ดังรูป
+    Note : 
+    1. ห้ามใช้ Bootstrap 
+    2. สนใจเฉพาะส่วนที่วงสีแดง
+    3. upload ขึ้น github.io     -->
+
+
+    <div class="box-contain">
+        <form action="#" class="form-box">
+            <div class="boxs">
+                <div class="box-row box-group1">
+                    <label>Flying From</label><br>
+                    <select name="flyingFrom">
+                        <option value="bangkok1">bangkok, thailand</option>
+                        <option value="bangkok2">bangkok, thailand2</option>
+                        <option value="bangkok3">bangkok, thailand3</option>
+                        <option value="bangkok4">bangkok, thailand4</option>
+                        <option value="bangkok5">bangkok, thailand5</option>
+                    </select>
+                </div>
+                <div class="box-row box-group1">
+                    <label>To</label><br>
+                    <select name="flyingTo">
+                        <option value="chiangmai1">chiangmai, thailand</option>
+                        <option value="chiangmai2">chiangmai, thailand2</option>
+                        <option value="chiangmai3">chiangmai, thailand3</option>
+                        <option value="chiangmai4">chiangmai, thailand4</option>
+                        <option value="chiangmai5">chiangmai, thailand5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="boxs">
+                <div class="box-row box-group1">
+                    <label>Departing:</label><br>
+                    <input type="date" name="Departing">
+                </div>
+                <div class="box-row">
+                    <label>Returning:</label><br>
+                    <input type="date" name="Returning">
+                </div>
+            </div>
+
+            <div class="boxs">
+                <div class="box-row box-group2">
+                    <div class="group2">
+                        <label>Adult</label><br>
+                        <input type="number" name="Adult" min="1" max="100" value="1">
+                    </div>
+                    <div class="group2">
+                        <label>Child</label><br>
+                        <input type="number" name="Child" min="0" max="100" value="0">
+                    </div>
+                    <div class="group2">
+                        <label>Infant</label><br>
+                        <input type="number" name="Infant" min="1" max="100" value="0">
+                    </div>
+                    <div class="group2">
+                        <label class="txtCurrency">Currency</label><br>                        
+                        <select name="Currency">
+                            <option value="">TH</option>
+                            <option value="">US</option>
+                            <option value="">EU</option>
+                            <option value="">CH</option>
+                            <option value="">RUS</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="boxs-footer">
+                <div class="box-row">
+                    <button type="button">Search</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    
+</body>
+</html>
