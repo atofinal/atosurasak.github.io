@@ -1,0 +1,149 @@
+html {
+    font-size: 16px;    
+    --bgColorBox: #ddd;
+    --bordertest: solid 2px #333;
+    --bordertest2: solid 2px rgb(255, 0, 0);
+    --bordertest3: solid 2px rgb(0, 68, 255);
+    --marginBox: 2rem;
+    --bgNavs: #040D14;
+    --colorMenu: #f7f7f7;
+    --bodyColor: #232F34;
+    --bgContent: #f9f9f9;
+    --colorContent: #252525;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bodyColor);
+    color: var(--colorContent);
+}
+
+.navs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: solid 3px #ab5a25;
+    background: var(--bgNavs);
+    width: 100%;
+    position: fixed;
+}
+.nav {
+    padding: 10px;
+    cursor: pointer;
+    color: var(--colorMenu);  
+}
+.navs li:last-child {    
+    color: #985eff;
+}
+/* .nav:hover {    
+    border-bottom: solid 5px #03dac5;
+    margin-bottom: -5px;       
+} */
+.after-sec {
+    padding-top: 40px;
+}
+
+.container {
+    justify-content: center; 
+    display: flex;
+}
+.sub-con {
+    display: flex;
+    width: 90%;
+}
+
+.boxs {
+    border: var(--bordertest);
+    background: var(--bgColorBox);
+    margin-top: 2.35rem;
+}
+
+.box-first {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.box-second {
+    /* border: var(--bordertest2); */
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.group-first {    
+    height: calc(90vh - 3rem);
+    width: calc(100% - 1rem);
+}
+.group-second {
+    /* border: var(--bordertest3);     */
+    height: calc(43vh - 2rem);    
+    width: calc(45% - 1rem);
+}
+
+.box-1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;    
+}
+.box-1 > div {
+    padding: 1rem;
+    height: 90%;    
+    overflow: hidden;
+}
+.box-2 {
+    cursor: pointer;
+}
+.box-3 {
+    cursor: pointer;
+}
+.box-4 {
+    cursor: pointer;
+}
+.box-5 { 
+    cursor: pointer;
+}
+img {
+    object-fit: cover;
+    height: 15.2rem;
+    width: 100%;    
+}
+
+.footer {
+    margin-top: 3.5rem;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    color: var(--colorMenu);
+    padding-bottom: 15px;
+    font-size: 0.8rem;
+}
+
+@media all and (max-width:720px){
+    body {
+        /* margin: auto;
+        padding: auto; */
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-con {
+        width: 100%;
+        display: block;
+    }
+    .box-first,
+    .box-second {
+        flex: 1;               
+    } 
+    .group-first,
+    .group-second {
+        width: 100%;
+    }
+    .boxs {
+        margin-top: auto;
+    }
+}
