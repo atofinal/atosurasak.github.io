@@ -3,15 +3,24 @@ html {
     --bgColorBox: #ddd;
     --bordertest: solid 2px #333;
     --bordertest2: solid 2px rgb(255, 0, 0);
-    --bordertest3: solid 2px rgb(0, 68, 255);
+    --bordertest3: solid 2px rgb(0, 68, 255);    
     --marginBox: 2rem;
     --bgNavs: #040D14;
     --colorMenu: #f7f7f7;
     --bodyColor: #232F34;
-    --bgContent: #f9f9f9;
+    --bgContent: rgba(249, 249, 249, 0.8);  /* ## color base #f9f9f9 */
     --colorContent: #252525;
-
+    --img1: url(./img/aerial-alpine-ceresole-repixels_ale-desktop-backgrounds-1562.jpg);
+    --img2: url(./img/aerial-view-beach-beautiful-cliff-462162.jpg);
+    --img3: url(./img/agriculture-asia-cat-china-235648.jpg);
+    --img4: url(./img/brown-statues-2819082.jpg);
+    --img5: url(./img/cottages-in-the-middle-of-beach-753626.jpg);
+    --img6: url(./img/daylight-forest-glossy-lake-443446.jpg);
+    --img7: url(./img/flight-landscape-nature-sky-36717.jpg);
+    --img8: url(./img/person-standing-on-brown-rock-formation-3791466.jpg);  
+    --colorHover: #03dac5;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -33,16 +42,18 @@ body {
 }
 .nav {
     padding: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
     color: var(--colorMenu);  
 }
 .navs li:last-child {    
-    color: #985eff;
+    color: #4CAF50;
 }
-/* .nav:hover {    
-    border-bottom: solid 5px #03dac5;
-    margin-bottom: -5px;       
-} */
+.nav:hover {    
+    /* border-top: 5px solid var(--colorHover); */
+    /* margin-top: -5px; */
+    color: var(--colorMenu);
+}
+
 .after-sec {
     padding-top: 40px;
 }
@@ -60,6 +71,9 @@ body {
     border: var(--bordertest);
     background: var(--bgColorBox);
     margin-top: 2.35rem;
+}
+.boxs-ad {
+    border: none;    
 }
 
 .box-first {
@@ -83,6 +97,10 @@ body {
     height: calc(43vh - 2rem);    
     width: calc(45% - 1rem);
 }
+.group-second-ad {    
+    height: calc(43vh - 2rem);    
+    width: calc(33% - 1rem);
+}
 
 .box-1 {
     text-overflow: ellipsis;
@@ -91,26 +109,15 @@ body {
 }
 .box-1 > div {
     padding: 1rem;
-    height: 90%;    
+    height: 89%;    
     overflow: hidden;
 }
-.box-2 {
-    cursor: pointer;
-}
-.box-3 {
-    cursor: pointer;
-}
-.box-4 {
-    cursor: pointer;
-}
-.box-5 { 
-    cursor: pointer;
-}
-img {
+
+/* .img-index {
     object-fit: cover;
     height: 15.2rem;
     width: 100%;    
-}
+} */
 
 .footer {
     margin-top: 3.5rem;
@@ -122,11 +129,110 @@ img {
     font-size: 0.8rem;
 }
 
-@media all and (max-width:720px){
-    body {
-        /* margin: auto;
-        padding: auto; */
-    }
+.img-box {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 15.2rem;
+    width: 100%;
+    color: var(--colorContent);  
+}
+.content {
+    background: var(--bgContent);
+    padding: 5px 15px; 
+    height: 3.2rem;    
+    overflow-y: hidden;
+    /* text-overflow: ellipsis;   ## not working, support only firefox  */
+    margin-top: auto;
+}
+
+.img01 {    
+    background-image: var(--img1);      
+}
+.img02 {    
+    background-image: var(--img2);      
+}
+.img03 {    
+    background-image: var(--img3);      
+}
+.img04 {    
+    background-image: var(--img4);      
+}
+.img05 {    
+    background-image: var(--img5);      
+}
+.img06 {    
+    background-image: var(--img6);      
+}
+.img07 {    
+    background-image: var(--img7);      
+}
+.img08 {    
+    background-image: var(--img8);      
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--colorContent);    
+}
+a:visited {
+    color: var(--colorContent);    
+}
+
+.nav > a:link,
+.nav > span > a:link {
+    text-decoration: none;
+    color: var(--colorMenu);    
+}
+.nav > a:visited,
+.nav > span > a:visited {
+    color: var(--colorMenu);    
+}
+.nav > a:hover,
+.nav > span > a:hover {
+    color: var(--colorHover);
+}
+.nav > a:active,
+.nav > span > a:active {
+    color: #FF9800
+}
+
+.box-1 > div > a:visited {
+    color: var(--colorContent);  
+}
+.box-1 > div > a:hover {
+    color: #0f7d00;
+}
+.content > a:visited {
+    color: var(--colorContent);  
+}
+.content > a:hover {
+    color: #0f7d00;
+}
+
+.content-body {
+    background: var(--bgColorBox);    
+}
+.content-body-ad {
+    background: var(--bgContent);    
+}
+.content-page {    
+    justify-content: center; 
+    display: flex;
+}
+.content-boxs {
+    background: var(--colorMenu);
+    width: 70%;
+    padding: 2rem;
+}
+.content-boxs-ad {    
+    width: 90%;
+    /* padding: 2rem; */
+}
+
+@media all and (max-width:720px){    
     .container {
         display: flex;
         flex-direction: column;
@@ -142,8 +248,23 @@ img {
     .group-first,
     .group-second {
         width: 100%;
-    }
+    }    
     .boxs {
         margin-top: auto;
+    }
+    .content {
+        height: 5.3rem; 
+    }
+
+    /* ## Ad. section -------------  */
+    .content-boxs {
+        width: 100%;
+    }
+    .group-second-ad {
+        width: 100%;        
+    }
+    .boxs-ad {        
+        margin-bottom: 2rem;
+        overflow-y: hidden;
     }
 }

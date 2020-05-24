@@ -1,0 +1,19 @@
+html {
+    --textlorembox1 : 'This section show Content only, image inside. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque cupiditate est a inventore dicta, totam corporis dignissimos veniam doloremque veritatis minima aliquid libero et suscipit quos aut, asperiores eius? Temporibus fuga eligendi ex nemo. Amet in maxime sapiente delectus? Maiores modi quibusdam excepturi perspiciatis aut at alias officiis, pariatur voluptatibus aliquam consequatur sapiente quia delectus enim nobis rerum officia voluptatum libero, fugit esse reprehenderit deleniti iusto, nemo amet? Odio aut quas magnam dolores nemo blanditiis quos consequatur quod? Maiores omnis velit, totam dolor ullam sed ipsam odit atque mollitia rem magnam ut. Expedita iure, modi sunt assumenda quas explicabo adipisci? pariatur voluptatibus aliquam consequatur sapiente quia Content only, image inside. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque cupiditate est a inventore dicta, totam corporis dignissimos veniam doloremque veritatis minima aliquid libero et suscipit quos aut, asperiores eius? Temporibus fuga eligendi ex nemo. Amet in maxime sapiente delectus? Maiores modi quibusdam excepturi perspiciatis aut at alias officiis, pariatur voluptatibus aliquam consequatur sapiente quia delectus enim nobis rerum officia voluptatum libero, fugit esse reprehenderit deleniti iusto, nemo amet? Odio aut quas magnam dolores nemo blanditiis quos consequatur quod? Maiores omnis velit, totam dolor ullam sed ipsam odit atque mollitia rem magnam ut. Expedita iure, modi sunt assumenda quas explicabo adipisci? pariatur voluptatibus aliquam consequatur sapiente quia';
+    --textlorem20: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio distinctio ducimus accusamus eos magni laboriosam minima nemo ratione error voluptatum?';
+
+}
+
+.content > span::before {
+    content: var(--textlorem20);
+}
+.content > a > span::before {
+    content: var(--textlorem20);
+}
+
+.box-1 > div > span::before {
+    content: var(--textlorembox1);
+}
+.box-1 > div > a > span::before {
+    content: var(--textlorembox1);
+}
